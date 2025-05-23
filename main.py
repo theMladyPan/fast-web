@@ -13,3 +13,8 @@ async def root():
 @app.get("/health")
 async def health():
     return {"unix_time": time.time()}
+
+
+@app.get("/healthz")
+async def healthz():
+    return {"unix_time": time.time()}
